@@ -1,0 +1,92 @@
+Las medidas con un tiempo de 60 segundos y sin fuente: (n prom desv)
+5 22.6 3.38230690506
+
+
+Las medidas con un tiempo de 60 segundos y sin fuente para dir 1:
+5 20.6 5.88557558782
+
+
+Las medidas con un tiempo de 60 segundos y sin fuente para dir 2:
+5 20.4 6.24819974073
+
+
+Las medidas de radiación de fondo con 1s:
+5 0.6 0.8
+
+
+Las medidas de radiación de fondo con 10s:
+10 4.16666666667 1.59338912036
+
+
+Las medidas para la camisa incandescente: n prom desv sqrt(prom)
+104 32.0130769231 5.53214784359 5.65800997905
+
+
+El porcentaje de datos que se encuentra entre 1 desviación es 69.23
+El valor esperado era 68.3, la diferencia fue de 0.93 porciento
+
+
+El porcentaje de datos que se encuentra entre 2 desviaciones es 96.15
+El valor esperado era 95.45, la diferencia fue de 0.70 porciento
+
+
+
+Actividad 2
+
+Para la actividad dos se posicionó las muestras a 8.6cm con 10s de medición. 
+
+Para la muestra de Columbita: (alpha, beta, gamma, fondo)
+-41.36 -4.35 18.26 90.43   suma = 62.99
+
+Para la muestra de Cd-109: (alpha, beta, gamma, fondo)
+26.81 -21.43 80.32 16.51   suma = 102.21
+
+Para la muestra de Co-109: (alpha, beta, gamma, fondo)
+68.40 -16.45 39.05 9.00   suma = 100.00
+
+
+El promedio conteos para la distancia 3 fue de 9999.0
+El promedio conteos para la distancia 4 fue de 9999.0
+El promedio conteos para la distancia 5 fue de 9641.8
+El promedio conteos para la distancia 6 fue de 7647.0
+El promedio conteos para la distancia 7 fue de 6146.8
+El promedio conteos para la distancia 8 fue de 5063.2
+El promedio conteos para la distancia 9 fue de 4156.8
+El promedio conteos para la distancia 10 fue de 3324.0
+El promedio conteos para la distancia 11 fue de 2647.0
+
+ Al realizar la regresión lineal entre el conteo y 1/r^2 se obtuvo:
+Conteo = (63696.47) (1/r^2) + (-3003.99)
+
+La distancia para una atenuación del 50% es de 8.00cm.
+La distancia para una atenuación del 10% es de 15.95cm.
+
+ Al realizar la regresión lineal con los datos para los distintos tipos de radiación, se obtuvo:
+Para radiación alpha: Conteo = (4335.85) (1/r^2) + (443.61)
+
+Para radiación beta: Conteo = (58237.20) (1/r^2) + (-3425.52)
+
+Para radiación gamma: Conteo = (1539.97) (1/r^2) + (-105.40)
+
+
+ Actividad 4
+Con imanes se tuvo 18.44 \pm 6.61 conteos
+Sin imanes se tuvo 49.44 \pm 5.46 conteos
+
+ Actividad 5
+Sin material de por medio se tuvieron 2548.08 \pm 33.76 conteos
+
+Para el papel aluminio (A) se obtuvo 2169.28 \pm 25.47 conteos, es decir una atenuacion del 14.87%
+
+Para el Plomo (S) se obtuvo 44.88 \pm 7.52 conteos, es decir una atenuacion del 98.24%
+
+Para el Poliestireno (C) se obtuvo 1817.88 \pm 16.77 conteos, es decir una atenuacion del 28.66%
+
+Para el Plastico (E) se obtuvo 726.08 \pm 25.33 conteos, es decir una atenuacion del 71.50%
+
+Para el Aluminio (P) se obtuvo 69.08 \pm 10.98 conteos, es decir una atenuacion del 97.29%
+
+Para la regresión del papel vs numero de hojas de obtuvo: (mu, I0):
+0.14  2387.01
+Sin el papel se espera un promedio de 2387.00699395 conteos/10s
+Debe haber 5.37 hojas para lograr una reducción del 50%
