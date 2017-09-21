@@ -41,10 +41,10 @@ regR,b = curve_fit(camB, data[:,5], data[:,4])
 R = 0.2
 
 def em(I, r, V):
-    return 2*V/(np.power(camBReal(I, R),2)*R)
+    return 2*V/(np.power(camBReal(I, R)*r,2))
 
 def em2(I, r, V):
-    return 2*V/np.power((regI[0]*I+regI[1])*R/1000,2)
+    return 2*V/np.power((regI[0]*I+regI[1])*r/1000,2)
 #plt.scatter(data[:,5], data[:,4])
 #plt.plot(data[:,5], camB(data[:,5], a[0]))
 #plt.plot(data[:,5], regI[0]*data[:,5] + regI[1])
@@ -60,9 +60,11 @@ for i in range(3):
 
 for i in range(3):
     for j in range(7):
-        print data[j,i], rta[i*3+j]
+        if(rta[3*i+j] > 200000000000):
+            print rta[3*i+j],j,i
+        #print data[j,i], rta[i*3+j], i,j
         
-print rta[0+7:7+7].mean()/100000000000
+print rta[0:7].mean()/100000000000
 
 
 
