@@ -1,0 +1,284 @@
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%showpacs,preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-1}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+\usepackage[spanish]{babel} % silabea palabras castellanas <- Puedo poner 
+
+\usepackage[utf8]{inputenc} % Acepta caracteres en castellano
+\usepackage[T1]{fontenc} % Encoding de salida al pdf
+
+
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\usepackage{gensymb}
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+
+\begin{document}
+
+\preprint{APS/123-QED}
+
+\title{Informe Relación Carga-Masa}% Force line breaks with \\
+
+
+\author{Javier Alejandro Acevedo Barroso}
+\email{ja.acevedo12@uniandes.edu.co}
+\author{Boris Nicolás Saenz Rodríguez}%
+ \email{bn.saenz10@uniandes.edu.co}
+ \author{David Leonardo Paipa León}
+\email{dl.paipa10@uniandes.edu.co}
+\affiliation{%
+ Departamento de Física, Universidad de los Andes\\
+}%
+
+
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+Usando ecuaciones básicas de electromagnetismo se deduce el campo magnético en la región uniforme de un arreglo de bobinas de Helmholtz. Utilizando ahora rayos catódicos, se aceleran electrones a una velocidad fija mediante un campo eléctrico, la velocidad final de los electrones depende de la diferencia de potencial. Y se hace incidir los rayos en escalones de metal a una distancia fija, con el fin de obtener datos de la corriente y el voltaje para un radio específico del movimiento circular producto del campo magnético. Utilizando las mediciones, se hace una regresión y se obtiene la relación carga-masa del electrón.\\
+El campo magnético generado por el arreglo sí logra ser bastante uniforme en la región del tubo, además, se observó que la intensidad del campo depende linealmente con la corriente, como se esperaba de acuerdo al modelo teórico.\\
+Tras medir la relación carga-masa, se obtuvo $\frac{e}{m_e} = 1.511$x$10^{11}$ C/kg. Valor con una diferencia del 14.05\% al reportado por CODATA.
+\end{abstract}
+
+%\pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
+                             % Classification Scheme.
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+%\tableofcontents
+
+\section{\label{sec:level1}Introducción:}
+Cuando electrones son sujetos a un potencial, se aceleran debido a la fuerza generada por el campo eléctrico:
+\begin{equation}
+m\vec{a}=\vec{F}=q\vec{E}
+\end{equation}
+Eventualmente, la velocidad final de un electrón acelerado por determinado potencial es:
+\begin{equation}
+v_{f}=\sqrt[]{2V \left( \frac{q}{m}\right)}
+\end{equation}
+La fuerza de Lorentz \cite{Griffiths} un efecto que influencia a las partículas cargadas que se mueven con cierta velocidad perpendicular a un campo magnético, esta fuerza viene de la forma:
+\begin{equation}
+\vec{F}=q \vec{v} \times  \vec{B}=m\vec{a}=m \frac{v^2}{R}
+\end{equation}
+Usando todo lo anterior, y usando la velocidad final resultante de la aceleración como velocidad de interacción con el campo magnético, se obtiene una expresión para la proporción carga-masa:
+\begin{equation}
+\frac{q}{m}=\frac{2V}{\left(BR\right)^2}
+\end{equation}
+Siendo B la magnitud del campo magnético perpendicular, V el potencial de aceleración y R el radio de curvatura debido a la fuerza de Lorentz.
+
+En las bobinas de Helmholtz, el campo en el medio es muy estable, incluso ante pequeñas variaciones de posición . Esto se debe a la naturaleza de los campos generados por espiras, que tienden a ser rectos en el centro de la bobina. Ya que son bobinas con el centro sobre el mismo eje, el campo pasa por el medio de ambas en una dirección y por el exterior va en la otra dirección. 
+
+Usando la Ley de Biot-Savart para obtener elcampo magnético de las espiras y la simetría de las bobinas se tiene que el campo magnético en el punto P medio del montaje (a la altura del centro de las bobinas y en medio de la distancia entre ambas) es:
+
+\begin{equation}
+B=0.75\mu_{0}\frac{ni}{R}
+\end{equation}
+
+Siendo $\mu_{0} $la permiablidad magnética en el vacio R el radio de las bobinas, I la corriente que genera el campo en las bobinas y n el número de espiras en cada bobina
+
+\section{Objetivos}
+Para este experimento uno de nuestros objetivos fue observar y describir la fuerza a la que se somete una partícula cargada en movimiento cuando está en presencia de un campo magnético. No obstante, la meta principal es encontrar la proporción carga-masa basados en los datos obtenido por la intensidad del campo y la curvatura de los electrones cuandos e someten a este.
+\section{Montaje Experimental}
+\subsection{Actividad 1: Medición de campo magnético sobre las bobinas}
+
+\begin{figure}[h!]
+\includegraphics[scale = 0.8]{exp12.png}% Here is how to import EPS art
+\caption{\label{BvsI} Bobinas de Hemholtz \cite{yer2}}
+\end{figure}
+
+Se ubican dos bobinas de Hemholtz con una distancia entre ellas de 18cm como se muestra en la figura 1 y se conectan a una fuente de poder para asi armar el circuito que corresponde a la figura 2.
+
+\begin{figure}[h]
+\includegraphics[scale = 0.5]{exp13.png}% Here is how to import EPS art
+\caption{\label{BvsI} circuito de bobinas de Hemholtz \cite{yer0}}
+\end{figure}
+
+Utilizando un Teslámetro se hacen mediciones del campo magnético para detectar la intensidad de campos magnéticos externos que puedan interferir con el experimento. Después se enciende la fuente y se toman datos de el campo magnético en el centro de la configuración y por último se toman datos del campo magnético en los siguientes angulos: 0, 90, 180, 270, esto para verificar que el campo magnético tiene simetría azimutal.
+
+\subsection{Actividad 2: Relación carga-masa}
+
+\begin{figure}[h!]
+\includegraphics[scale = 0.5]{exp1.png}% Here is how to import EPS art
+\caption{\label{BvsI} Bobinas de Hemholtz con tubo catodico \cite{yer1}}
+\end{figure}
+
+Para determinar la relación entre carga masa del electrón se coloca el tubo de rayos catódicos como se muestra en la figura 3.
+
+\begin{figure}[h]
+\includegraphics[scale = 0.5]{exp21.png}% Here is how to import EPS art
+\caption{\label{BvsI} Circuito a seguir para bobinas de Hemholtz con tubo catodico \cite{yer1}}
+\end{figure}
+
+Para este montaje se sigue el circuito mostrado en la figura 4, el cual, una vez ya implementado el montaje quedara como en la figura 5. Para asegurarse que el voltaje que aparece en la fuente es efectivamente el que esta acelerando los electrones se conecta un multímetro en paralelo. Se requiere que la habitación en la que se esta trabajando sea oscura y que ningun otro montaje que consista de campos magneticos este encendido, sin prender las bobinas de Hemhholtz se ajusta el voltaje hasta aproximadamente 60V, en el cual el haz comienza a ser visible. Una vez el haz sea visible se encienden las bobinas y se observara que el haz se curvara. Puesto que se espera medir la relación carga masa se toman datos para diferentes radios (barras de metal) a 2cm, 3cm, 4cm y 5cm de la fuente en los que el haz incidirá. Para cada uno se variara el voltaje desde 100V hasta 250V de 25V en 25V y se anotara su respectivo valor de corriente, siempre pendiente de que la corriente no pase los 5A
+
+
+\begin{figure}[h]
+\includegraphics[scale = 0.5]{exp2.png}% Here is how to import EPS art
+\caption{\label{BvsI} Montaje a utilizar para medir relación carga-masa \cite{yer1}}
+\end{figure}
+
+\section{Resultados y Análisis}
+\subsection{Campo Magnético}
+Con ayuda del Teslámetro se midió el campo magnético en la región entre las bobinas. En el centro del arreglo se observó que al aumentar la corriente, el campo magnético aumenta linealmente.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\label{a2Table}
+Campo Magnético [mT] & Corriente [A] \\ \hline
+0.60 & 1.00 \\ \hline
+1.10 & 1.50 \\ \hline
+1.60 & 2.00 \\ \hline
+1.90 & 2.50 \\ \hline
+2.40 & 3.00 \\ \hline
+2.90 & 3.50 \\ \hline
+3.10 & 4.00 \\ \hline
+\end{tabular}
+%\caption{Número de colisiones a diferentes distancias en cinco minutos.}
+
+\end{table}
+El campo magnético en la región donde estarán los electrones el campo magnético es casi perfectamente uniforme, con solo pequeñas variaciones del orden de 0.1 mT.\\
+Realizando una regresión lineal de los datos se obtuvo:
+\begin{equation}
+B = (0.85 mT) I - (0.18mT)
+\end{equation}
+Con $R^2 = 0.962$\\
+Utilizando el modelo previamente descrito para el campo magnético en función de la corriente en el centro del arreglo, se obtuvo la siguiente gráfica \ref{BvsI}: 
+\begin{figure}[h]
+\includegraphics[scale = 0.5]{B_vs_I.png}% Here is how to import EPS art
+\caption{\label{BvsI} Gráfica del campo magnético contra corriente junto a la regresión lineal y al ajuste del modelo}
+\end{figure}
+Se observa que la regresión lineal es más precisa a la hora de predecir los datos para corrientes bajas, sin embargo, a través de la gráfica se obseva que el modelo es un buen ajuste para los datos del teslámetro.
+\subsection{Relación carga-masa}
+Conociendo ya el campo magnético, se procede a calcular la relación carga masa para cada radio, voltaje entre cátodo y ánodo y corriente entre las bobinas (a través del campo magnético). Se calcula el promedio para cada radio junto con su desviación estándar\ref{rvsC}:\footnote{Se eliminó el dato de V = 125V con radio de 5cm pues el haz de electrones tocaba el escalón con una corriente, pero al aumentar la corriente seguía tocando el escalón, dando un rango de valores para la corriente con V=125V y r = 5cm.}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\label{rvsC}
+Radio (cm)& $e/m$ Promedio ($\frac{C }{kg}) 10^{11} $  \\ \hline
+2 & $1.6585 \pm 0.1342 $\\ \hline
+3 & $2.1305 \pm 0.3809 $\\ \hline
+4 & $2.0325 \pm 0.1548 $\\ \hline
+5 & $1.9694 \pm 0.0779 $\\ \hline
+\end{tabular}
+%\caption{Número de colisiones a diferentes distancias en cinco minutos.}
+
+\end{table}
+Partiendo de la ecuación:
+\begin{equation}
+\frac{e}{m} = \frac{2V}{(Br)^2}
+\end{equation}
+Se realizó una regresión lineal para cada radio:
+\begin{equation}
+V = \frac{e}{m} \frac{r^2}{2} B^2
+\end{equation}
+Para radio de 2cm:
+\begin{equation}
+V = (32242157 V/T^2)B^2 + 4 V
+\end{equation}
+Con $R = 0.962$\\
+Para radio de 3cm:
+\begin{equation}
+V = (64471249 v)B^2 + 50 V
+\end{equation}
+Con $R = 0.9771$\\
+Para radio de 4cm:
+\begin{equation}
+V = (106554233 V/T^2)B^2 + 66 V
+\end{equation}
+Con $R = 0.982$\\
+Para radio de 5cm:
+\begin{equation}
+V = (208557822 V/T^2)B^2 + 31 V
+\end{equation}
+Con $R = 0.999$
+Notando que en todas las regresiones la pendiente es mucho mayor que el corte con el eje, se cálcula la relación carga masa para cada radio con la pendiente de la regresión correspondiente. Además de que todas tienen un $R$ bastante cercano a 1.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\label{cmR}
+Radio (cm)& $e/m$  ($\frac{C }{kg}) 10^11$  \\ \hline
+2 & $1.612 $ \\ \hline
+3 & $1.432 $ \\ \hline
+4 & $1.332$ \\ \hline
+5 & $1.668$ \\ \hline
+Promedio & 1.511 \\ \hline
+\end{tabular}
+%\caption{Número de colisiones a diferentes distancias en cinco minutos.}
+\end{table}
+Si bien, se observa que a medida que aumenta el radio, el valor medido para el coeficiente carga-masa se va haciendo más pequeño. Cuando se llegar a radio de 5cm, el valor vuelve a acercarse al valor para radio de 2cm. Esto puede deberse al dato que se eliminó con radio de 5cm. Se observa que todos los valores son menores al valor reportado por CODATA que es $1.7588 $x$10^{11}$. La diferencia con el promedio es de 14.05\%.\\
+Para radios mayores se espera menor precisión pues se requiere un campo magnético más fuerte para poder desviar el haz lo suficientemente rápido, o de más alto voltaje para que los electrones puedan llegar a ese radio.\\
+Para radios mayores, la intensidad del haz cuando golpea el escalón es menor, en algunas ocasiones incluso, el haz queda atrapado en el escalón para un rango de valores de campo magnético y voltaje. Este fenómeno lleva a datos con muy alta incertidumbre en contraposición con los radios menores.\\
+A voltajes bajos la incertidumbre aumenta pues es más difícil encontrar el punto en el que el haz toca el escalón, pues la intensidad del haz es muy baja.\\
+Notando que la diferencia entre el valor para la relación carga-masa medido y el teórico es relativamente baja (menor al 15\%), se puede decir que se midió exitosamente la relación carga masa.\\
+Utilizando el teslámetro, se midió el campo magnético en la región del tubo SIN corriente en las bobinas, con el fin de ver la participación del campo magnético de la tierra. Sin embargo, el campo magnético terrestre es tan bajo que no se pudo medir en mT. Se descarta que el campo magnético terrestre tuviera mucha influencia en la diferencia entre resultados.\\
+La no perpendicularidad entre $\vec{v}$ y el campo magnético sí es un problema para el cálculo de la relación carga-masa. Afortunadamente, se puede modificar el montaje hasta que el haz de electrones no sigue un trayectoria helicoidal, sino circular, de modo que $\vec{v}$ y el campo magnético sean perpendiculares.\\
+La no uniformidad del campo magnético generado por las bobinas también afectaría la medición, sin embargo, la variación en la región del tubo es basatnte baja y por lo tanto, despreciable.
+
+
+\section{Conclusiones}
+\subparagraph{Campo magnético} Se logró obtener un campo magnético bastante uniforme para la región donde estará el tubo. Se observó una dependencia lineal entre la corriente y la intensidad del campo. También se observó un buen ajuste al modelo propuesto en la introducción para el campo magnético en función de la corriente en las bobinas. Esto representa un avance considerable retomando los objetivos iniciales.
+\subparagraph{Relación carga-masa} Se midió con éxito la relación carga masa del electrón. El valor obtenido difiere en un 14.05\% del valor de CODATA. Esto es un error relativo pequeño y cumple con el objetivo principal del experimento, no obstante se cree que en situaciones más controladas se puede obtener un valor mucho más cercano al registro de CODATA.
+\subparagraph{Deflección circular.} Se observó que los electrones si tienden a obedecer una trayectoria circular cuando están expuestos a un campo magnético. esto es indicio de que el producto Cruz de la fuerza de Lorentz se cumple y además que esta fuerza está descrita por las unidades dadas.
+\subparagraph{Carga y descarte.} La deflección que presentaban los electrones al someterse a campo magnético es propia de partículas cargadas.No obstante, habían ocasiones en las que incluso ante el cambio de corriente el haz permanecía en un radio dado. Esto lo explicamos como cierta interacción eléctrica entre el filamento de los radios y el haz, pues parecia atraer los haces de radio corto, es decir, con poca velocidad final.
+\subparagraph{Simetría polar.} Midiendo el campo en diferentes punto de la bobina comprobamos que existe simetría polar del campo respecto el eje que pasa por el centro de las dos bobinas. Además, midiendo el campo afuera del cilindro formado por las dos bobinas comprobamos que el campo magnético va en el otro sentido.
+\subparagraph{Ambiente.} Existe cierto error a la hora de medir el campo magnético, que es causado por diversas fuentes: aparatos eléctricos cercanos, magnetización de algunas herramientas e incluso incertidumbre del mismo Teslámetro. consideramos que este error es pequeño, pero no despreciable.
+% The \nocite command causes all entries in a bibliography to be printed out
+% whether or not they are actually referenced in the text. This is appropriate
+% for the sample file to show the different styles of references, but authors
+% most likely will not want to use it.
+%\nocite{*}
+
+
+%\ref{fig:epsart}
+
+
+
+%\ref{fig:epsart}
+
+%\ref{fig:epsart}
+
+
+\bibliography{bibl.bib}% Produces the bibliography via BibTeX.
+
+\end{document}
